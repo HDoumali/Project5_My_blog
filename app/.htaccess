@@ -1,0 +1,12 @@
+#AuthName "Ceci est du contenu sécurise"
+#AuthType Basic
+#AuthUserFile "C:\wamp64\www\project5_blog_s\private\.htpasswd"
+#Require valid-user
+
+RewriteRule ^(.*) http://localhost/project5_blog_s/index.php? [R=301,NC,L]
+
+
+# Mise en place d'URL génériques
+# Réécrit une URL de type xxx/yyy/zzz en index.php?controleur=xxx&action=yyy&id=zzz
+RewriteEngine on
+RewriteRule ^([a-zA-Z]*)/?([a-zA-Z]*)?/?([a-zA-Z0-9]*)?/?$ index.php?controleur=$1&action=$2&id=$3 [NC,L]

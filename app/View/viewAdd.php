@@ -1,0 +1,32 @@
+<?php $this->titre = 'Blog - Ajouter un article' ?>
+
+
+<div class="container" id="viewAddArticle">
+
+	<p><a class="btn btn-primary btn-lg" id=btnreturn href="index.php?action=articles" role="button"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>Retour</a></p>
+
+	<h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>AJOUTER UN ARTICLE</h2>
+	<form class="formnewarticle" method="POST" action="index.php?action=addArticle"> 
+	  <div class="form-group">
+	  <p>Veuillez saisir votre nouvel article en remplissant les champs ci-dessous.</p>
+	  </div>
+	  <div class="form-group">
+	     <label for="exampleInputEmail1">Auteur</label>
+	     <input type="text" class="form-control" id="exampleInputEmail1" name="author" placeholder="Auteur" required>
+	  </div>
+	  <div class="form-group">
+	     <label for="exampleInputEmail1">Titre</label>
+	     <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Auteur" required>
+	  </div>
+	  <div class="form-group">
+	     <label for="exampleInputEmail1">Chapo</label>
+	     <textarea class="form-control" rows="5" name="chapo" placeholder="chapo" required></textarea>
+	  </div>
+	  <div class="form-group">
+	     <label for="exampleInputEmail1">Contenu</label>
+	     <textarea class="form-control" rows="5" name="content" placeholder="content" required></textarea>
+	  </div>
+	  <button type="submit" class="btn btn-primary" id=btnnewarticle>Envoyer</button>
+	</form>
+
+</div>
