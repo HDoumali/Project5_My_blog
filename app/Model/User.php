@@ -1,8 +1,8 @@
 <?php
 
-//namespace project5_blog_s\private\Model;
+/*namespace project5_blog_s\appapp\Model;
 
-//use project5_blog_s\private\lib\Model;
+use project5_blog_s\app\lib\Model;*/
 
 require_once 'app/lib/Model.php';
 

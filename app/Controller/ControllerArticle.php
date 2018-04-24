@@ -1,10 +1,10 @@
 <?php
 
-/*namespace project5_blog_s\private\Controller;
+/*namespace project5_blog_s\app\Controller;
 
-use project5_blog_s\private\Model\Article;
-use project5_blog_s\private\Model\Comments;
-use project5_blog_s\private\lib\View;*/
+use project5_blog_s\app\Model\Article;
+use project5_blog_s\app\Model\Comments;
+use project5_blog_s\app\lib\View;*/
 
 require_once 'app/Model/Article.php';
 require_once 'app/Model/Comments.php';

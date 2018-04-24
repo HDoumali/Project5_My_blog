@@ -1,8 +1,8 @@
 <?php
 
-/*namespace project5_blog\lib;
+/*namespace project5_blog_s\app\lib;
 
-use project5_blog\lib\Configuration;*/
+use project5_blog_s\app\lib\Configuration;*/
 
 require_once 'Configuration.php';
 

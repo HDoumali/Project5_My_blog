@@ -2,9 +2,9 @@
 
 
 require 'app/Controller/Router.php';
-//require_once('vendor/autoload.php');
+/*require_once('vendor/autoload.php');
 
-//use projet5_blog_s\private\Controller\Routerswitch;
+use project5_blog_s\app\Controller\Router;*/
 
 session_start();
 

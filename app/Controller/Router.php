@@ -1,11 +1,11 @@
 <?php
 
-//namespace project5_blog_s\private\Controller;
+/*namespace project5_blog_s\app\Controller;
 
-/*use project5_blog_s\private\Controller\ControllerArticle; 
-use project5_blog_s\private\Controller\ControllerComment; 
-use project5_blog_s\private\Controller\ControllerUser; 
-use project5_blog_s\private\lib\View;*/
+use project5_blog_s\app\Controller\ControllerArticle; 
+use project5_blog_s\app\Controller\ControllerComment; 
+use project5_blog_s\app\Controller\ControllerUser; 
+use project5_blog_s\app\lib\View;*/
 
 require_once 'app/Controller/ControllerArticle.php';
 require_once 'app/Controller/ControllerUser.php';

@@ -1,9 +1,9 @@
 <?php
 
-/*namespace project5_blog_s\private\Controller;
+/*namespace project5_blog_s\app\Controller;
 
-use project5_blog_s\private\Model\User;
-use project5_blog_s\private\lib\View;*/
+use project5_blog_s\app\Model\User;
+use project5_blog_s\app\lib\View;*/
 
 require_once 'app/Model/User.php';
 require_once 'app/lib/View.php';
