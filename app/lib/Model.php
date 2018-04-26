@@ -1,10 +1,10 @@
 <?php
 
-/*namespace project5_blog_s\app\lib;
+namespace blog\lib;
 
-use project5_blog_s\app\lib\Configuration;*/
+use blog\lib\Configuration;
 
-require_once 'Configuration.php';
+//require_once 'Configuration.php';
 
 /**
  * Classe abstraite Modèle.
@@ -50,8 +50,8 @@ abstract class Model {
             $login = Configuration::get("login");
             $mdp = Configuration::get("mdp");
             // Création de la connexion
-            self::$bdd = new PDO($dsn, $login, $mdp, 
-                    array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            self::$bdd = new \PDO($dsn, $login, $mdp, 
+                    array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION));
         }
         return self::$bdd;
     }

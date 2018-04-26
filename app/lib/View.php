@@ -1,6 +1,6 @@
 <?php
 
-//namespace project5_blog_s\app\lib;
+namespace blog\lib;
 
 class View {
 
