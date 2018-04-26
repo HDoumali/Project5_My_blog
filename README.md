@@ -22,5 +22,5 @@ Step 2 : Creation of the database :
 
 You can now connect to the blog at the following URL and enjoy its features : 
 
-http:localhost/project_my_blog
+http://localhost/project_my_blog
 
