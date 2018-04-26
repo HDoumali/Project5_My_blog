@@ -8,7 +8,7 @@
 	<h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>AJOUTER UN ARTICLE</h2>
 	<form class="formnewarticle" method="POST" action="index.php?action=addArticle"> 
 	  <div class="form-group">
-	  <p>Veuillez saisir votre nouvel article en remplissant les champs ci-dessous.</p>
+	  	 <p>Veuillez saisir votre nouvel article en remplissant les champs ci-dessous.</p>
 	  </div>
 	  <div class="form-group">
 	     <label for="exampleInputEmail1">Auteur</label>
