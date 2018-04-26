@@ -17,7 +17,7 @@ Step 1 : Open the file app/Config/dev.ini and insert the following parameters :
 - mdp : Enter your password for access to the mysql database ("root" or "" by default)
 
 Step 2 : Creation of the database :
-- Create a new database on phpmyadmin (link : localhost/phpmyadmin on WAMP) withe the name saved in the file app/Config/dev.ini
+- Create a new database on phpmyadmin (link : localhost/phpmyadmin on WAMP) with the the name saved in the file app/Config/dev.ini
 - Import the file "project5_blog.sql" in the database
 
 You can now connect to the blog at the following URL and enjoy its features : 
