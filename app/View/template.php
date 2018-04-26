@@ -54,18 +54,15 @@
                         <a href="index.php?">ACCUEIL</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="index.php?action=articles">BLOG</a>
+                        <a href="index.php?action=articles"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> BLOG</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="index.php?action=addUser">ADMIN</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contactForm">CONTACT</a>
+                        <a href="#contactForm"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> CONTACT</a>
                     </li>
                     <?php if (!empty($_SESSION['user'])) { ?>
-                    <li class="page-scroll">
-                        <a href="index.php?action=disconnectUser">ME DECONNECTER</a>
-                    </li>
+                        <li class="page-scroll">
+                            <a href="index.php?action=disconnectUser"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> ME DECONNECTER</a>
+                        </li>
                     <?php } ?>
                 </ul>
             </div>
@@ -92,7 +89,12 @@
                             <li>
                                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
                             </li>
-                        </ul>
+                        </ul><br />
+                        <?php if (empty($_SESSION['user'])) { ?>
+                            <div class="pageadmin">
+                                <h5><a href="index.php?action=addUser"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> CONNEXION ADMIN</a></h5>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

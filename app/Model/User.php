@@ -25,7 +25,7 @@ class User extends Model
 		$sql = 'SELECT * FROM user WHERE login = ? AND password = ?';
 		$userExist = $this->executerRequete($sql, array($login, $password));
 		if ($userExist->rowCount() == 1) {
-			return $userExist->fetchAll(PDO::FETCH_OBJ);
+			return $userExist->fetchAll(\PDO::FETCH_OBJ);
 		}
 		return false;
 	}

@@ -148,6 +148,12 @@ body {
   padding-left:10px;
 }
 
+.pageadmin a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
 p {
   font-size: 20px;
 }

@@ -17,7 +17,7 @@
 
     <?php if (!empty($_SESSION['user'])) { ?>
         <div>
-           <a href="index.php?action=addArticle"><button type="button" class="btn btn-primary btn-lg" ">AJOUTER UN ARTICLE</button></a><br />
+           <a href="index.php?action=addArticle"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> AJOUTER UN ARTICLE</button></a><br />
         </div><br />
         <div class="row" id=infoadmin>
         	 <p> <span class="label label-info">Info</span> Bonjour l'admin, vous pouvez désormais ajouter un article.</p>

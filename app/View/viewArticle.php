@@ -8,10 +8,10 @@
 
 		<div class="row">
 			<div class="col-sm-12 col-md-3 col-lg-2">
-				<a href="index.php?action=editArticle&id=<?= $article['id'] ?>"><button type="button" class="btn btn-primary btn-lg" ">Modifier l'article</button></a>
+				<a href="index.php?action=editArticle&id=<?= $article['id'] ?>"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Modifier l'article</button></a>
 			</div>
 			<div class="col-sm-12 col-md-3 col-lg-2">
-				<a href="index.php?action=deleteArticle&id=<?= $article['id'] ?>"><button type="button" class="btn btn-primary btn-lg" ">Supprimer l'article</button></a>
+				<a href="index.php?action=deleteArticle&id=<?= $article['id'] ?>"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer l'article</button></a>
 			</div>
 		</div><br />
 		<div class="row" id=infoadmin>
@@ -29,7 +29,7 @@
 
 	<p><?= $this->clean($article['content']) ?></p>
 
-	<p class="titlecomment">Commentaires :</p>
+	<p class="titlecomment"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Commentaires :</p>
 
 	<?php foreach ($comments as $comment): ?>
 		<div class="contentcomment">

@@ -10,7 +10,7 @@
                         <span class="name">HASSAN DOUMALI</span>
                         <hr class="star-light">
                         <span class="skills">Le développeur web de tous les défis</span><br /><br />
-                        <a href="assets/docs/CvHassanDoumali.pdf" target="_blank"><button type="button" class="btn btn-primary btn-lg" ">TELECHARGER CV</button></a><br />
+                        <a href="assets/docs/CvHassanDoumali.pdf" target="_blank"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-download" aria-hidden="true"></span> TELECHARGER CV</button></a><br />
                     </div>
                 </div>
             </div>
