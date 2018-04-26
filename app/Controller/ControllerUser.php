@@ -5,18 +5,18 @@ namespace blog\Controller;
 use blog\Model\User;
 use blog\lib\View;
 
-/*require_once 'app/Model/User.php';
-require_once 'app/lib/View.php';*/
-
-class ControllerUser {
+class ControllerUser 
+{
 
 	private $user;
 
-	public function __construct() {
+	public function __construct() 
+	{
 		$this->user = new User(); 
 	}
 
-	public function addUser($login, $password) {
+	public function addUser($login, $password) 
+	{
         if($this->user->existUser($login)) {
 			$this->user->registrationUser($login, $password);
 			$view = new View("Congrat");
@@ -26,20 +26,21 @@ class ControllerUser {
 	    } 
 	}
 
-	public function userConnect($login, $password) {
+	public function userConnect($login, $password) 
+	{
 		$connectUser = $this->user->connectUser($login, $password); 
 		if($connectUser != false) {
 
 			$_SESSION['user'] = $connectUser;
 			$view = new View("Home"); 
 		    $view->generer(array());  
-		}
-		else{
+		} else {
 			throw new Exception("Mauvais identifiant ou mot de passe");
 		}
 	}
 
-	public function userDisconnect() {
+	public function userDisconnect() 
+	{
 		 $_SESSION = array();
 		 session_destroy();
 		 $view = new View("Home"); 

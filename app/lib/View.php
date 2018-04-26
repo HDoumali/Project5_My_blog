@@ -2,7 +2,8 @@
 
 namespace blog\lib;
 
-class View {
+class View 
+{
 
   // Nom du fichier associé à la vue
   private $fichier;
@@ -15,12 +16,14 @@ class View {
   }
 
   // Nettoie une valeur insérée dans une page HTML
-  private function clean($valeur) {
+  private function clean($valeur) 
+  {
       return htmlspecialchars($valeur, ENT_QUOTES, 'UTF-8', false);
   }
 
   // Génère et affiche la vue
-  public function generer($donnees) {
+  public function generer($donnees) 
+  {
       // Génération de la partie spécifique de la vue
       $content = $this->genererFichier($this->fichier, $donnees);
       // Génération du gabarit commun utilisant la partie spécifique
@@ -31,7 +34,8 @@ class View {
   }
 
   // Génère un fichier vue et renvoie le résultat produit
-  private function genererFichier($fichier, $donnees) {
+  private function genererFichier($fichier, $donnees) 
+  {
       if (file_exists($fichier)) {
         // Rend les éléments du tableau $donnees accessibles dans la vue
         extract($donnees);
@@ -42,8 +46,7 @@ class View {
         require $fichier;
         // Arrêt de la temporisation et renvoi du tampon de sortie
         return ob_get_clean();
-      }
-      else {
+      } else {
         throw new Exception("Fichier '$fichier' introuvable");
       }
   }

@@ -1,9 +1,9 @@
 #AuthName "Ceci est du contenu sécurise"
 #AuthType Basic
-#AuthUserFile "C:\wamp64\www\project5_blog_s\private\.htpasswd"
+#AuthUserFile ""
 #Require valid-user
 
-RewriteRule ^(.*) http://localhost/project5_blog_s/index.php? [R=301,NC,L]
+RewriteRule ^(.*) http://localhost/project5_my_blog/index.php? [R=301,NC,L]
 
 
 # Mise en place d'URL génériques
