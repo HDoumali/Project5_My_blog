@@ -1,12 +1,12 @@
 <?php
 
-/*namespace project5_blog_s\app\Controller;
+namespace blog\Controller;
 
-use project5_blog_s\app\Model\User;
-use project5_blog_s\app\lib\View;*/
+use blog\Model\User;
+use blog\lib\View;
 
-require_once 'app/Model/User.php';
-require_once 'app/lib/View.php';
+/*require_once 'app/Model/User.php';
+require_once 'app/lib/View.php';*/
 
 class ControllerUser {
 

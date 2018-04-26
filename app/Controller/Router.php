@@ -1,15 +1,15 @@
 <?php
 
-/*namespace project5_blog_s\app\Controller;
+namespace blog\Controller;
 
-use project5_blog_s\app\Controller\ControllerArticle; 
-use project5_blog_s\app\Controller\ControllerComment; 
-use project5_blog_s\app\Controller\ControllerUser; 
-use project5_blog_s\app\lib\View;*/
+use blog\Controller\ControllerArticle; 
+use blog\Controller\ControllerComment; 
+use blog\Controller\ControllerUser; 
+use blog\lib\View;
 
-require_once 'app/Controller/ControllerArticle.php';
+/*require_once 'app/Controller/ControllerArticle.php';
 require_once 'app/Controller/ControllerUser.php';
-require_once 'app/lib/View.php';
+require_once 'app/lib/View.php';*/
 
 class Router {
 

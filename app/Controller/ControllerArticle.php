@@ -1,14 +1,14 @@
 <?php
 
-/*namespace project5_blog_s\app\Controller;
+namespace blog\Controller;
 
-use project5_blog_s\app\Model\Article;
-use project5_blog_s\app\Model\Comments;
-use project5_blog_s\app\lib\View;*/
+use blog\Model\Article;
+use blog\Model\Comments;
+use blog\lib\View;
 
-require_once 'app/Model/Article.php';
+/*require_once 'app/Model/Article.php';
 require_once 'app/Model/Comments.php';
-require_once 'app/lib/View.php';
+require_once 'app/lib/View.php';*/
 
 class ControllerArticle {
 

@@ -1,10 +1,10 @@
 <?php
 
-/*namespace project5_blog_s\appapp\Model;
+namespace blog\Model;
 
-use project5_blog_s\app\lib\Model;*/
+use blog\lib\Model;
 
-require_once 'app/lib/Model.php';
+//require_once 'app/lib/Model.php';
 
 class User extends Model {
 

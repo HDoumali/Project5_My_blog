@@ -1,10 +1,10 @@
 <?php 
 
-/*namespace project5_blog_s\app\Model;
+namespace blog\Model;
 
-use project5_blog_s\app\lib\Model;*/
+use blog\lib\Model;
 
-require_once 'app/lib/Model.php'; 
+//require_once 'app/lib/Model.php'; 
 
 class Comments extends Model{
 
