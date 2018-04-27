@@ -87,7 +87,7 @@
                                 <a href="https://www.linkedin.com/in/hassan-doumali-640b86b5/" target="blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                <a href="https://github.com/HDoumali/" target="blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
                             </li>
                         </ul><br />
                         <?php if (empty($_SESSION['user'])) { ?>
