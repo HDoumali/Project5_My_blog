@@ -43,7 +43,7 @@ class ControllerArticle
 
   public function newArticle($title, $chapo, $content, $author)
   {
-      $newArticle = $this->articles->addArticle($title, $chapo, $content, $author);
+      $this->articles->addArticle($title, $chapo, $content, $author);
       //Actualisation de l'affichage des articles
       $this->articles();
   }

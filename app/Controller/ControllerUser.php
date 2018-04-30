@@ -21,9 +21,9 @@ class ControllerUser
 			$this->user->registrationUser($login, $password);
 			$view = new View("Congrat");
 			$view->generer(array());
-	    } else {
-	    	throw new \Exception("L'utilisateur '$login' existe deja");
+			return;
 	    } 
+	    	throw new \Exception("L'utilisateur '$login' existe deja");
 	}
 
 	public function userConnect($login, $password) 
