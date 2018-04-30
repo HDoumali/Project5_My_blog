@@ -47,7 +47,7 @@ class View
         // Arrêt de la temporisation et renvoi du tampon de sortie
         return ob_get_clean();
       } else {
-        throw new Exception("Fichier '$fichier' introuvable");
+          throw new Exception("Fichier '$fichier' introuvable");
       }
   }
 }

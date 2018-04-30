@@ -60,9 +60,9 @@
                         <a href="#contactForm"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> CONTACT</a>
                     </li>
                     <?php if (!empty($_SESSION['user'])) { ?>
-                        <li class="page-scroll">
+                            <li class="page-scroll">
                             <a href="index.php?action=disconnectUser"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> ME DECONNECTER</a>
-                        </li>
+                            </li>
                     <?php } ?>
                 </ul>
             </div>
@@ -91,9 +91,9 @@
                             </li>
                         </ul><br />
                         <?php if (empty($_SESSION['user'])) { ?>
-                            <div class="pageadmin">
+                                <div class="pageadmin">
                                 <h5><a href="index.php?action=addUser"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> CONNEXION ADMIN</a></h5>
-                            </div>
+                                </div>
                         <?php } ?>
                     </div>
                 </div>

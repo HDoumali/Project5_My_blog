@@ -2,9 +2,7 @@
 
 
 <div class="container" id="viewEditArticle">
-
 	<p><a class="btn btn-primary btn-lg" id=btnreturn href="index.php?action=article&id=<?= $_GET['id'] ?>" role="button"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>Retour</a></p>
-
 	<h2><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>MODIFIER UN ARTICLE</h2>
 	<form class="formeditarticle" method="POST" action="index.php?action=editArticle&id=<?= $_GET['id'] ?>"> 
 		  <div class="form-group">
@@ -28,7 +26,6 @@
 		  </div>
 		  <button type="submit" class="btn btn-primary" id=btneditarticle>Modifier</button>
 	</form>
-
 </div>
 
 

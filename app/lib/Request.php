@@ -9,7 +9,7 @@ class Request
         if (isset($array[$name])) {
           return htmlspecialchars($array[$name]);
         } else {
-          throw new \Exception("Paramètre '$name' absent");
+          	throw new \Exception("Paramètre '$name' absent");
         }
     }
 }

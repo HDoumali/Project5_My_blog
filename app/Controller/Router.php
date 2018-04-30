@@ -29,7 +29,7 @@ class Router
         if (isset($array[$name])) {
           return $array[$name];
         } else {
-          throw new \Exception("Paramètre '$name' absent");
+            throw new \Exception("Paramètre '$name' absent");
         }
     }
 
@@ -117,7 +117,7 @@ class Router
                       $password = sha1($this->request->getParametre($_POST, 'password'));
                       $this->ctrlUser->addUser($login, $password);
                     } else {
-                      $view = new View('ConnectRegist');
+                        $view = new View('ConnectRegist');
                         $view->generer(array());
                     }
                     break;
@@ -130,7 +130,7 @@ class Router
                       $this->ctrlUser->userConnect($login, $password);
                     } else {
                         $view = new View('ConnectRegist');
-                          $view->generer(array());
+                        $view->generer(array());
                     }
                     break;
 
@@ -144,10 +144,10 @@ class Router
           }
 
           } else {  // aucune action définie : affichage de l'accueil
-            $this->home();
+              $this->home();
           }
       } catch (\Exception $e) {
-        $this->error($e->getMessage());
+          $this->error($e->getMessage());
       }
     }
 

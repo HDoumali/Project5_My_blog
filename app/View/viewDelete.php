@@ -1,7 +1,6 @@
 <?php $this->titre = 'Blog - Supprimer un article' ?>
 
 <div class="container" id="viewDeleteArticle">
-
   <form class="formdeletearticle" method="post" action="index.php?action=deleteArticle&id=<?= $_GET['id'] ?>">
 	  	<h2><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Voulez-vous vraiment supprimer l'article ?</h2>
 		<div class="row">
