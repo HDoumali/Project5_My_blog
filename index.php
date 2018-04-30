@@ -8,5 +8,3 @@ session_start();
 
 $routeur = new Router();
 $routeur->routerRequest();
-
-

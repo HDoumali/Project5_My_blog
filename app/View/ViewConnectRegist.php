@@ -4,12 +4,13 @@
 
 <div class="container" id="viewConnectRegist">
 
-	<h3>Venez faire vivre le blog et apporter votre pierre à l'édifice</h3>
-
-	<div class="row">
-		<div class="col-lg-5">
-			<h1>INSCRIPTION</h1>
+	<div class="row"> 
+		<h3>Venez faire vivre le blog et apporter votre pierre à l'édifice</h3>
+		<div class=" col-sm-6 col-md-6 col-lg-6">
 			<form class="formregist" method="POST" action="index.php?action=addUser"> 
+				<div class="form-group">
+				<h1>INSCRIPTION</h1>
+			    </div>
 				  <div class="form-group">
 				     <label for="exampleInputEmail1">Pseudo</label>
 				     <input type="" class="form-control" id="exampleInputEmail1" name="login" placeholder="Pseudo" required>
@@ -22,9 +23,11 @@
 			</form>
 		</div>
 	    
-	    <div class="col-lg-5">
-	    	<h1>CONNEXION</h1>
-			<form class="formconnect" method="POST" action="index.php?action=connectUser"> 
+	    <div class="col-sm-6 col-md-6 col-lg-6">
+			<form class="formconnect" method="POST" action="index.php?action=connectUser">
+				<div class="form-group">
+			      <h1>CONNEXION</h1>
+			     </div>
 				  <div class="form-group">
 				     <label for="exampleInputEmail1">Pseudo</label>
 				     <input type="text" class="form-control" id="exampleInputEmail1" name="login" placeholder="Pseudo" required>

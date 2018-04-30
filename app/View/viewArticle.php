@@ -8,10 +8,10 @@
 
 		<div class="row">
 			<div class="col-sm-12 col-md-3 col-lg-2">
-				<a href="index.php?action=editArticle&id=<?= $article['id'] ?>"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Modifier l'article</button></a>
+				<p><a href="index.php?action=editArticle&id=<?= $article['id'] ?>"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Modifier l'article</button></a></p>
 			</div>
 			<div class="col-sm-12 col-md-3 col-lg-2">
-				<a href="index.php?action=deleteArticle&id=<?= $article['id'] ?>"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer l'article</button></a>
+				<p><a href="index.php?action=deleteArticle&id=<?= $article['id'] ?>"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer l'article</button></a></p>
 			</div>
 		</div><br />
 		<div class="row" id=infoadmin>
@@ -19,8 +19,7 @@
 	    </div>
 
 	<?php } ?>
-
-
+   
 	<h1><?= $this->clean($article['title']) ?></h1>
 
 	<p><em>Par <?= $this->clean($article['author']) ?>, le <?= $this->clean($article['article_date_fr']) ?>.</em></p>

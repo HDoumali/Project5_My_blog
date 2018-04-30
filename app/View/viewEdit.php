@@ -12,19 +12,19 @@
 		  </div>
 		  <div class="form-group">
 		     <label for="exampleInputEmail1">Auteur</label>
-		     <input type="text" class="form-control" id="exampleInputEmail1" name="author" placeholder="Auteur" required>
+		     <input type="text" class="form-control" id="exampleInputEmail1" name="author" placeholder="Auteur" value="<?= $article['author'] ?>" required>
 		  </div>
 		  <div class="form-group">
 		     <label for="exampleInputEmail1">Titre</label>
-		     <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Titre" required>
+		     <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Titre" value="<?= $article['title'] ?>" required>
 		  </div>
 		  <div class="form-group">
 		     <label for="exampleInputEmail1">Chapo</label>
-		     <textarea class="form-control" rows="5" name="chapo" placeholder="chapo de l'article" required></textarea>
+		     <textarea class="form-control" rows="5" name="chapo" placeholder="chapo de l'article" required><?= $article['chapo'] ?></textarea>
 		  </div>
 		  <div class="form-group">
 		     <label for="exampleInputEmail1">Contenu</label>
-		     <textarea class="form-control" rows="5" name="content" placeholder="contenu" required></textarea>
+		     <textarea class="form-control" rows="5" name="content" placeholder="contenu" required><?= $article['content'] ?></textarea>
 		  </div>
 		  <button type="submit" class="btn btn-primary" id=btneditarticle>Modifier</button>
 	</form>

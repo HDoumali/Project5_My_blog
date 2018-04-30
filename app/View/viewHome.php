@@ -24,7 +24,7 @@
                     <p>Vous pouvez me contacter en remplissant attentivement le formulaire ci-dessous. Je serai ravi de répondre à chacune de vos questions.</p>
                     <br />
 
-                    <form name="sentMessage" id="contactForm" novalidate="">
+                    <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Nom</label>

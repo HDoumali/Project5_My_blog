@@ -23,7 +23,7 @@ class Article extends Model
     	if ($article->rowCount() == 1)
         return $article->fetch();  // Accès à la première ligne de résultat
       else
-        throw new Exception("Aucun article ne correspond à l'identifiant '$articleId'");
+        throw new \Exception("Aucun article ne correspond à l'identifiant '$articleId'");
   }
 
   public function addArticle($title, $chapo, $content, $author)

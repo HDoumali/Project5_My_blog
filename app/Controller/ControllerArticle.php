@@ -34,7 +34,7 @@ class ControllerArticle
   }
 
   public function comment($articleId, $author, $comment)
-  {
+  {   
       // Sauvegarde du commentaire
       $this->comment->addComment($articleId, $author, $comment);
       // Actualisation de l'affichage de l'article
@@ -43,16 +43,21 @@ class ControllerArticle
 
   public function newArticle($title, $chapo, $content, $author)
   {
-     
       $newArticle = $this->articles->addArticle($title, $chapo, $content, $author);
       //Actualisation de l'affichage des articles
       $this->articles();
   }
 
   public function editArticle($title, $chapo, $content, $author,$articleId)
-  {
+  {   
       $this->articles->updateArticle($title, $chapo, $content, $author, $articleId);
-      $this->article($articleId);   
+      $this->article($articleId);
+  }
+
+  public function dataArticle($articleId) 
+  {
+      $article = $this->articles->getArticle($articleId);
+      return $article;
   }
 
   public function deleteArticle($articleId)
@@ -61,5 +66,5 @@ class ControllerArticle
       $this->articles();
   }
 
-}
 
+}

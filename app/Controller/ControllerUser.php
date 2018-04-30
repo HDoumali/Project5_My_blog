@@ -22,7 +22,7 @@ class ControllerUser
 			$view = new View("Congrat");
 			$view->generer(array());
 	    } else {
-	    	throw new Exception("L'utilisateur '$login' existe deja");
+	    	throw new \Exception("L'utilisateur '$login' existe deja");
 	    } 
 	}
 
@@ -35,7 +35,7 @@ class ControllerUser
 			$view = new View("Home"); 
 		    $view->generer(array());  
 		} else {
-			throw new Exception("Mauvais identifiant ou mot de passe");
+			throw new \Exception("Mauvais identifiant ou mot de passe");
 		}
 	}
 

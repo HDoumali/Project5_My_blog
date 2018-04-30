@@ -35,7 +35,7 @@ body {
 }
 
 #viewDeleteArticle{
-  padding: 100px;
+   padding: 100px;
    margin-top: 100px;
 }
 
@@ -45,12 +45,13 @@ body {
 }
 
 #viewConnectRegist{
-  padding: 100px;
-   margin-top: 100px;
-   margin-left: 270px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
 }
 #viewConnectRegist h3{
   color:#005689;
+  text-align: center;
 }
 
 .datearticle{
@@ -90,24 +91,21 @@ body {
   text-align: center;
 }
 
-.formdeletearticle .row{
-  margin-left: 380px;
-  text-align: center;
-}
-
 .formregist{
   background-color: #D5EEFF;
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 10px;
+  margin-top: 10px;
 }
-
 .formconnect{
   background-color: #D5EEFF;
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 10px;
+  margin-top: 10px;
 }
+
 #btncomment{
   margin-left:30px;
 }
