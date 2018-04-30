@@ -2,6 +2,8 @@
 
 ## Parcours développeur d'application - PHP/Symfony 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5131b54e55e84475bbcac03600b71a55)](https://www.codacy.com/app/HDoumali/Project5_My_blog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=HDoumali/Project5_My_blog&amp;utm_campaign=Badge_Grade)
+
 ### Theme 
 
 To realize the visual part of the blog, I decided to use the theme "Freelancer" available on the website www.startbootstrap.com.
