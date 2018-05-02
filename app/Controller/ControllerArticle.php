@@ -2,8 +2,8 @@
 
 namespace blog\Controller;
 
-use blog\Model\Article;
-use blog\Model\Comments;
+use blog\Model\ArticleManager;
+use blog\Model\CommentManager;
 use blog\lib\View;
 
 class ControllerArticle 
@@ -13,8 +13,8 @@ class ControllerArticle
   private $comment;
   
   public function __construct() {
-      $this->articles = new Article();
-      $this->comment = new Comments();
+      $this->articles = new ArticleManager();
+      $this->comment = new CommentManager();
   }
 
   // Affiche les détails sur un billet

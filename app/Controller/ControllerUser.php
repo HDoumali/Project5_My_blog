@@ -2,7 +2,7 @@
 
 namespace blog\Controller;
 
-use blog\Model\User;
+use blog\Model\UserManager;
 use blog\lib\View;
 
 class ControllerUser 
@@ -12,7 +12,7 @@ class ControllerUser
 
 	public function __construct() 
 	{
-		$this->user = new User(); 
+		$this->user = new UserManager(); 
 	}
 
 	public function addUser($login, $password) 

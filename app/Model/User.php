@@ -1,32 +1,61 @@
-<?php
+<?php 
 
 namespace blog\Model;
 
-use blog\lib\Model;
-
-class User extends Model 
+class User
 {
-
-	public function registrationUser($login, $password) 
+	private $id; 
+	private $login;
+	private $password;
+	
+	public function __construct(array $datas)
 	{
-		$sql = 'INSERT INTO user (login, password) VALUES (?, ?)';
-		$this->executerRequete($sql, array($login, $password));
+      $this->hydrate($datas);
 	}
+    
+    public function hydrate(array $datas)
+    {
+	  foreach ($datas as $key => $value)
+	  {
+	    // On récupère le nom du setter correspondant à l'attribut.
+	    $method = 'set'.ucfirst($key);
+	        
+	    // Si le setter correspondant existe.
+	    if (method_exists($this, $method))
+	    {
+	      // On appelle le setter.
+	      $this->$method($value);
+	    }
+      }
+    }
 
-	public function existUser($login) 
-	{
-		$sql = 'SELECT * FROM user WHERE login = ?';
-		$user = $this->executerRequete($sql, array($login));
-		return ($user->rowCount() === 0);
-	}
+    public function getId()
+    {
+    	return $this->id; 
+    }
 
-	public function connectUser($login, $password) 
-	{
-		$sql = 'SELECT * FROM user WHERE login = ? AND password = ?';
-		$userExist = $this->executerRequete($sql, array($login, $password));
-		if ($userExist->rowCount() == 1) {
-			return $userExist->fetchAll(\PDO::FETCH_OBJ);
-		}
-		return false;
-	}
-}
+    public function setId($id)
+    {
+    	$this->id = $id;
+    }
+
+    public function getLogin()
+    {
+    	return $this->login; 
+    }
+
+    public function setLogin($login)
+    {
+    	$this->login = $login;
+    }
+
+    public function getPassword()
+    {
+    	return $this->password; 
+    }
+
+    public function setPassword($password)
+    {
+    	$this->password = $password;
+    }
+}    

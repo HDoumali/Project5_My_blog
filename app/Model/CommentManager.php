@@ -4,13 +4,18 @@ namespace blog\Model;
 
 use blog\lib\Model;
 
-class Comments extends Model
+class CommentManager extends Model
 {
 
     public function getComments($articleId)
     {
+        $comments = [];
 		$sql = 'SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comment WHERE id_article=? ORDER BY comment_date DESC';
-		$comments = $this->executerRequete($sql, array($articleId));
+		$request = $this->executerRequete($sql, array($articleId));
+        while ($datas = $request->fetch())
+        {
+            $comments[] = new Comment($datas);
+        }
 	    return $comments;
     }
 

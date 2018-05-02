@@ -26,10 +26,10 @@
 
   <div class="row" id="content">
        <?php foreach ($articles as $article): ?>
-           <h2><?= $this->clean($article['title']) ?></h2>
-           <p><?= $this->clean($article['chapo']) ?></p>
-           <p class="datearticle"><em>Article publié le <?= $this->clean($article['article_date_fr']) ?>.</em></p><br />
-           <p><a class="btn btn-primary btn-lg pull-right" href="index.php?action=article&id=<?= $article['id'] ?>" role="button">Lire l'article</a></p><br /><br />
+           <h2><?= $this->clean($article->getTitle()) ?></h2>
+           <p><?= $this->clean($article->getChapo()) ?></p>
+           <p class="datearticle"><em>Article publié le <?= $this->clean($article->getArticle_date_fr()) ?>.</em></p><br />
+           <p><a class="btn btn-primary btn-lg pull-right" href="index.php?action=article&id=<?= $article->getId(); ?>" role="button">Lire l'article</a></p><br /><br />
            <hr>
        <?php endforeach; ?>
   </div>

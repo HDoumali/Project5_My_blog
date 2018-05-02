@@ -1,47 +1,94 @@
-<?php
+<?php 
 
 namespace blog\Model;
 
-use blog\lib\Model;
-
-class Article extends Model 
+class Article 
 {
+	private $id; 
+	private $title;
+	private $chapo;
+	private $content; 
+	private $author;
+	private $article_date_fr;
 
-  // Renvoie la liste des billets du blog
-  public function getArticles() 
-  {
-      $sql = 'SELECT id, title, chapo, content, DATE_FORMAT(article_date, \'%d/%m/%Y à %Hh%imin%ss\') AS article_date_fr FROM article ORDER BY article_date DESC';
-      $articles = $this->executerRequete($sql);
-      return $articles;
-  }
-  
-  //Renvoie un billet
-  public function getArticle($articleId)
-  {
-    	$sql = 'SELECT id, title, chapo, content,author, DATE_FORMAT(article_date, \'%d/%m/%Y à %Hh%imin%ss\') AS article_date_fr FROM article WHERE id=?';
-    	$article = $this->executerRequete($sql, array($articleId));
-    	if ($article->rowCount() == 1)
-        return $article->fetch();  // Accès à la première ligne de résultat
-      else
-        throw new \Exception("Aucun article ne correspond à l'identifiant '$articleId'");
-  }
+	public function __construct(array $datas)
+	{
+      $this->hydrate($datas);
+	}
+    
+    public function hydrate(array $datas)
+    {
+	  foreach ($datas as $key => $value)
+	  {
+	    // On récupère le nom du setter correspondant à l'attribut.
+	    $method = 'set'.ucfirst($key);
+	        
+	    // Si le setter correspondant existe.
+	    if (method_exists($this, $method))
+	    {
+	      // On appelle le setter.
+	      $this->$method($value);
+	    }
+      }
+    }
 
-  public function addArticle($title, $chapo, $content, $author)
-  {
-    	$sql = 'INSERT INTO article (title, chapo, content, author, article_date) VALUES (?,?,?,?,NOW())';
-    	$this->executerRequete($sql, array($title, $chapo, $content, $author));
-  }
+    public function getId()
+    {
+    	return $this->id; 
+    }
 
-  public function updateArticle($title, $chapo, $content, $author,$articleId)
-  {
-    	$sql ='UPDATE article SET title=?, chapo=?, content=?, author=?, article_date=NOW() WHERE id=?';
-    	$this->executerRequete($sql, array($title, $chapo, $content, $author,$articleId));
-  }
+    public function setId($id)
+    {
+    	$this->id = $id;
+    }
 
-  public function removeArticle($articleId)
-  {
-    	$sql = 'DELETE FROM article WHERE id = ?';
-    	$this->executerRequete($sql, array($articleId));
-  }
+    public function getTitle()
+    {
+    	return $this->title; 
+    }
 
-}
+    public function setTitle($title)
+    {
+    	$this->title = $title;
+    }
+
+    public function getChapo()
+    {
+    	return $this->chapo; 
+    }
+
+    public function setChapo($chapo)
+    {
+    	$this->chapo = $chapo;
+    }
+
+    public function getContent()
+    {
+    	return $this->content; 
+    }
+
+    public function setContent($content)
+    {
+    	$this->content = $content;
+    }
+
+    public function getAuthor()
+    {
+    	return $this->author; 
+    }
+
+    public function setAuthor($author)
+    {
+    	$this->author = $author;
+    }
+
+    public function getArticle_date_fr()
+    {
+    	return $this->article_date_fr; 
+    }
+
+    public function setArticle_date_fr($article_date_fr)
+    {
+    	$this->article_date_fr = $article_date_fr;
+    }
+}    

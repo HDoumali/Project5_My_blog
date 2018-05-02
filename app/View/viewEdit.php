@@ -10,19 +10,19 @@
 		  </div>
 		  <div class="form-group">
 		     <label for="exampleInputEmail1">Auteur</label>
-		     <input type="text" class="form-control" id="exampleInputEmail1" name="author" placeholder="Auteur" value="<?= $article['author'] ?>" required>
+		     <input type="text" class="form-control" id="exampleInputEmail1" name="author" placeholder="Auteur" value="<?= $article->getAuthor() ?>" required>
 		  </div>
 		  <div class="form-group">
 		     <label for="exampleInputEmail1">Titre</label>
-		     <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Titre" value="<?= $article['title'] ?>" required>
+		     <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Titre" value="<?= $article->getTitle() ?>" required>
 		  </div>
 		  <div class="form-group">
 		     <label for="exampleInputEmail1">Chapo</label>
-		     <textarea class="form-control" rows="5" name="chapo" placeholder="chapo de l'article" required><?= $article['chapo'] ?></textarea>
+		     <textarea class="form-control" rows="5" name="chapo" placeholder="chapo de l'article" required><?= $article->getChapo() ?></textarea>
 		  </div>
 		  <div class="form-group">
 		     <label for="exampleInputEmail1">Contenu</label>
-		     <textarea class="form-control" rows="5" name="content" placeholder="contenu" required><?= $article['content'] ?></textarea>
+		     <textarea class="form-control" rows="5" name="content" placeholder="contenu" required><?= $article->getContent() ?></textarea>
 		  </div>
 		  <button type="submit" class="btn btn-primary" id=btneditarticle>Modifier</button>
 	</form>
