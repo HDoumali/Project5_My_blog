@@ -59,7 +59,7 @@
                     <li class="page-scroll">
                         <a href="#contactForm"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> CONTACT</a>
                     </li>
-                    <?php if (!empty($_SESSION['user'])) { ?>
+                    <?php if (!empty($_SESSION['id'])) { ?>
                             <li class="page-scroll">
                             <a href="index.php?action=disconnectUser"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> ME DECONNECTER</a>
                             </li>
@@ -90,10 +90,16 @@
                                 <a href="https://github.com/HDoumali/" target="blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
                             </li>
                         </ul><br />
-                        <?php if (empty($_SESSION['user'])) { ?>
+                        <?php 
+
+                        if (empty($_SESSION['id'])) { ?>
                                 <div class="pageadmin">
                                 <h5><a href="index.php?action=addUser"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> CONNEXION ADMIN</a></h5>
                                 </div>
+                        <?php } elseif ($_SESSION['admin'] == 1) { ?>
+                                    <div class="pageadmin">
+                                    <h5><a href="index.php?action=admin"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> PAGE ADMINISTRATION</a></h5>
+                                    </div>
                         <?php } ?>
                     </div>
                 </div>

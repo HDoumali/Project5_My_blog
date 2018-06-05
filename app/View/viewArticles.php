@@ -15,7 +15,7 @@
 
 <div class="container" id="viewArticle">
 
-    <?php if (!empty($_SESSION['user'])) { ?>
+    <?php if (!empty($_SESSION['admin'])) { ?>
         <div>
            <a href="index.php?action=addArticle"><button type="button" class="btn btn-primary btn-lg" "><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> AJOUTER UN ARTICLE</button></a><br />
         </div><br />

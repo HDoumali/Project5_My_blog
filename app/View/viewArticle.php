@@ -4,7 +4,7 @@
 
 	<p><a class="btn btn-primary btn-lg" id=btnreturn href="index.php?action=articles" role="button"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>Retour</a></p>
 
-	<?php if (!empty($_SESSION['user'])) { ?>
+	<?php if (!empty($_SESSION['admin'])) { ?>
 
 		<div class="row">
 			<div class="col-sm-12 col-md-3 col-lg-2">

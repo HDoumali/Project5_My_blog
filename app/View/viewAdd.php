@@ -1,5 +1,10 @@
 <?php $this->titre = 'Blog - Ajouter un article' ?>
 
+<?php 
+	//ENREGISTREMENT DU TOKEN
+	$token = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
+	$_SESSION['token'] = $token;
+?>
 
 <div class="container" id="viewAddArticle">
 
@@ -26,6 +31,7 @@
 	     <label for="exampleInputEmail1">Contenu</label>
 	     <textarea class="form-control" rows="5" name="content" placeholder="content" required></textarea>
 	  </div>
+	  <input type="hidden" name="token" id="token" value="<?php echo $token; ?>" />
 	  <button type="submit" class="btn btn-primary" id=btnnewarticle>Envoyer</button>
 	</form>
 

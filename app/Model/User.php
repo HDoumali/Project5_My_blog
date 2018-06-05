@@ -7,27 +7,7 @@ class User
 	private $id; 
 	private $login;
 	private $password;
-	
-	public function __construct(array $datas)
-	{
-      $this->hydrate($datas);
-	}
-    
-    public function hydrate(array $datas)
-    {
-	  foreach ($datas as $key => $value)
-	  {
-	    // On récupère le nom du setter correspondant à l'attribut.
-	    $method = 'set'.ucfirst($key);
-	        
-	    // Si le setter correspondant existe.
-	    if (method_exists($this, $method))
-	    {
-	      // On appelle le setter.
-	      $this->$method($value);
-	    }
-      }
-    }
+    private $confirm;
 
     public function getId()
     {
@@ -58,4 +38,15 @@ class User
     {
     	$this->password = $password;
     }
+
+    public function getConfirm()
+    {
+        return $this->confirm; 
+    }
+
+    public function setConfirm($confirm)
+    {
+        $this->confirm = $confirm;
+    }
+
 }    

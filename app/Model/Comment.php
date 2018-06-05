@@ -9,27 +9,7 @@ class Comment
 	private $author;
 	private $comment; 
 	private $comment_date_fr;
-
-	public function __construct(array $datas)
-	{
-      $this->hydrate($datas);
-	}
-    
-    public function hydrate(array $datas)
-    {
-	  foreach ($datas as $key => $value)
-	  {
-	    // On récupère le nom du setter correspondant à l'attribut.
-	    $method = 'set'.ucfirst($key);
-	        
-	    // Si le setter correspondant existe.
-	    if (method_exists($this, $method))
-	    {
-	      // On appelle le setter.
-	      $this->$method($value);
-	    }
-      }
-    }
+    private $approuve;
 
     public function getId()
     {
@@ -79,5 +59,15 @@ class Comment
     public function setComment_date_fr($comment_date_fr)
     {
     	$this->comment_date_fr = $comment_date_fr;
+    }
+
+    public function getApprouve()
+    {
+        return $this->approuve; 
+    }
+
+    public function setApprouve($approuve)
+    {
+        $this->approuve = $approuve;
     }
 }    

@@ -4,7 +4,6 @@ namespace blog\Controller;
 
 use blog\lib\Request;
 use blog\Controller\ControllerArticle; 
-use blog\Controller\ControllerComment; 
 use blog\Controller\ControllerUser; 
 use blog\lib\View;
 
@@ -53,43 +52,43 @@ class Router
                     break;
                 //AJOUTER UN ARTICLE
               case 'addArticle':
-                    if(!empty ($_POST)) {
-                      $title = $this->request->getParametre($_POST, 'title');
-                      $chapo = $this->request->getParametre($_POST, 'chapo');
-                      $content = $this->request->getParametre($_POST, 'content');
-                      $author = $this->request->getParametre($_POST, 'author');
-                      $this->ctrlArticle->newArticle($title, $chapo, $content, $author);
-                    } else {
-                      $view = new View('Add');
-                      $view->generer(array());
-                    }
-                    break;
+                          if(!empty ($_POST)) {
+                            $title = $this->request->getParametre($_POST, 'title');
+                            $chapo = $this->request->getParametre($_POST, 'chapo');
+                            $content = $this->request->getParametre($_POST, 'content');
+                            $author = $this->request->getParametre($_POST, 'author');
+                            $this->ctrlArticle->newArticle($title, $chapo, $content, $author);
+                          } else {
+                            $view = new View('Add');
+                            $view->generer(array());
+                          }
+                  break;
               //MODIFIER UN ARTICLE
               case 'editArticle':
-                    if(!empty ($_POST) AND !empty($_GET)) {
-                      $articleId = $this->request->getParametre($_GET, 'id');
-                      $title = $this->request->getParametre($_POST, 'title');
-                      $chapo = $this->request->getParametre($_POST, 'chapo');
-                      $content = $this->request->getParametre($_POST, 'content');
-                      $author = $this->request->getParametre($_POST, 'author');
-                      $this->ctrlArticle->editArticle($title, $chapo, $content, $author, $articleId);
-                    } else {
-                        $articleId = $this->request->getParametre($_GET, 'id');
-                        $article = $this->ctrlArticle->dataArticle($articleId);
-                        $view = new View('Edit');
-                        $view->generer(array('article' => $article));
-                    }
-                    break;
+                          if(!empty ($_POST) AND !empty($_GET)) {
+                            $articleId = $this->request->getParametre($_GET, 'id');
+                            $title = $this->request->getParametre($_POST, 'title');
+                            $chapo = $this->request->getParametre($_POST, 'chapo');
+                            $content = $this->request->getParametre($_POST, 'content');
+                            $author = $this->request->getParametre($_POST, 'author');
+                            $this->ctrlArticle->editArticle($title, $chapo, $content, $author, $articleId);
+                          } else {
+                              $articleId = $this->request->getParametre($_GET, 'id');
+                              $article = $this->ctrlArticle->dataArticle($articleId);
+                              $view = new View('Edit');
+                              $view->generer(array('article' => $article));
+                          }
+                  break;
                //SUPPRIMER UN ARTICLE
                case 'deleteArticle':
-                    if(!empty ($_POST)) {
-                      $articleId = $this->request->getParametre($_POST, 'id'); 
-                      $this->ctrlArticle->deleteArticle($articleId);
-                    } else {
-                        $view = new View('Delete');
-                        $view->generer(array());
-                    }
-                    break;
+                          if(!empty ($_POST)) {
+                            $articleId = $this->request->getParametre($_POST, 'id'); 
+                            $this->ctrlArticle->deleteArticle($articleId);
+                          } else {
+                              $view = new View('Delete');
+                              $view->generer(array());
+                          }
+                  break;
                //INSCRIPTION D'UN NOUVEL UTILISATEUR
                case 'addUser':
                     if(!empty ($_POST)){
@@ -112,9 +111,47 @@ class Router
                         $view->generer(array());
                     }
                     break;
+
                //DECONNEXION DE L'UTILISATEUT
                case 'disconnectUser':
                     $this->ctrlUser->userDisconnect();
+                    break;
+
+               //VISUALISATION DES UTILISATEURS
+               case 'admin':
+                   if(isset($_SESSION['admin']) AND !empty ($_SESSION['admin'])){
+                    $this->ctrlUser->users();
+                    return;
+                   }
+                        throw new \Exception("Page inexistante");
+                    break;
+               //CONFIRMATION DE L'ADMIN 
+               case 'confirmadmin':
+                    if(isset($_GET) AND !empty($_GET)) {
+                      $userId = $this->request->getParametre($_GET, 'id');
+                      $this->ctrlUser->confirmUserAdmin($userId);
+                    }
+                    break;
+                // NON CONFIRMATION DE L'ADMIN
+                case 'noconfirmadmin':
+                    if(isset($_GET) AND !empty($_GET)) {
+                      $userId = $this->request->getParametre($_GET, 'id');
+                      $this->ctrlUser->noConfirmUserAdmin($userId);
+                    }
+                    break;
+                //APPROBATION DU COMMENTAIRE
+                case 'confirmcomment':
+                    if(isset($_GET) AND !empty($_GET)) {
+                      $commentId = $this->request->getParametre($_GET, 'id');
+                      $this->ctrlUser->validComment($commentId);
+                    }
+                    break;
+                //NON APPROBATION DU COMMENTAIRE
+                case 'noconfirmcomment':
+                    if(isset($_GET) AND !empty($_GET)) {
+                      $commentId = $this->request->getParametre($_GET, 'id');
+                      $this->ctrlUser->noValidComment($commentId);
+                    }
                     break;
                default:
                     throw new \Exception("Action non valide");

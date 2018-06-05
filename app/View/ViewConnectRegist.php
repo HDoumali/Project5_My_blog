@@ -1,6 +1,10 @@
 <?php $this->titre = 'Blog - Inscription/Connexion'; ?>
 
-
+<?php 
+	//ENREGISTREMENT DU TOKEN
+	$token = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
+	$_SESSION['token'] = $token;
+?>
 
 <div class="container" id="viewConnectRegist">
 	<div class="row"> 
@@ -18,6 +22,7 @@
 				    <label for="exampleInputEmail1">Mot de passe</label>
 				    <input type="password" class="form-control" id="exampleInputEmail1" name="password" placeholder="Mot de passe" required>
 				</div>
+				<input type="hidden" name="token" id="token" value="<?php echo $token; ?>" />
 				<button type="submit" class="btn btn-primary" id=btnregist>S'inscrire</button>
 			</form>
 		</div>
@@ -35,6 +40,7 @@
 				     <label for="exampleInputEmail1">Mot de passe</label>
 				     <input type="password" class="form-control" id="exampleInputEmail1" name="password" placeholder="Mot de passe" required>
 				</div>
+				<input type="hidden" name="token" id="token" value="<?php echo $token; ?>" />
 				<button type="submit" class="btn btn-primary" id=btnconnect>Se connecter</button>
 			</form>
 	    </div>

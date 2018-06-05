@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+#viewAdmin{
+  margin-top:150px;
+}
+
 #viewArticle{
   margin-top: 10px;
 }
