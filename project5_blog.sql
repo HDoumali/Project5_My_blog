@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 05 juin 2018 à 11:56
+-- Généré le :  mar. 05 juin 2018 à 15:13
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -92,18 +92,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(100) NOT NULL,
   `confirm` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`id`, `login`, `password`, `confirm`) VALUES
-(1, 'projet', '169254c45fa4ed7ea11c00541ffb17b0cde39625', 1),
-(6, 'Hassan', '375bb4d463383a11f9a6d493ca467c88c4c4ae4a', 0),
-(25, 'test4', '1ff2b3704aede04eecb51e50ca698efd50a1379b', 0),
-(24, 'openclassrooms2', 'e9d14d595a993cf07a919173eefb6d74b29a5290', 0),
-(23, 'openclassrooms', 'e9d14d595a993cf07a919173eefb6d74b29a5290', 0);
+(30, 'projet', 'def53e95f1fc7a2aa7dbc4685f282f1e3e4ea3b364b07622e58edb15d239b252', 1),
+(31, 'hassan', '16771578794e44505c9da8b3c2d5b4062bf0047580a1088d2b08a043ce5d2edc', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
