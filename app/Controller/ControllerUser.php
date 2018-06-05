@@ -15,10 +15,12 @@ class ControllerUser
 	{
 		$this->user = new UserManager(); 
 		$this->comment = new CommentManager(); 
+		
 	}
 
 	public function addUser($login, $password) 
-	{
+	{   
+		$password = hash('sha256', $password);
         if($this->user->existUser($login)) {
 			$this->user->registrationUser($login, $password);
 			$view = new View("Congrat");
@@ -29,13 +31,13 @@ class ControllerUser
 	}
 
 	public function userConnect($login, $password) 
-	{ 
+	{   
+		$password = hash('sha256', $password);
 		$connectUserAdmin = $this->user->connectUserAdmin($login, $password);  
 		if($connectUserAdmin != false) {
 
 			$_SESSION['id'] = $connectUserAdmin->getId();
 			$_SESSION['admin'] = $connectUserAdmin->getConfirm();
-			$_SESSION['login'] = $connectUserAdmin->getLogin();
 			$view = new View("Home"); 
 		    $view->generer(array());  
 		} else{

@@ -93,7 +93,7 @@ class Router
                case 'addUser':
                     if(!empty ($_POST)){
                       $login = $this->request->getParametre($_POST, 'login');
-                      $password = sha1($this->request->getParametre($_POST, 'password'));
+                      $password = $this->request->getParametre($_POST, 'password');
                       $this->ctrlUser->addUser($login, $password);
                     } else {
                         $view = new View('ConnectRegist');
@@ -104,7 +104,7 @@ class Router
                case 'connectUser':
                     if(!empty ($_POST)){
                       $login = $this->request->getParametre($_POST, 'login');
-                      $password = sha1($this->request->getParametre($_POST, 'password'));
+                      $password = $this->request->getParametre($_POST, 'password');
                       $this->ctrlUser->userConnect($login, $password);
                     } else {
                         $view = new View('ConnectRegist');
