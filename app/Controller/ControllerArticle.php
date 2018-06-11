@@ -43,15 +43,27 @@ class ControllerArticle
 
   public function newArticle($title, $chapo, $content, $author)
   {   
-      $this->articles->addArticle($title, $chapo, $content, $author);
-      //Actualisation de l'affichage des articles
-      $this->articles();
+    if (isset($_SESSION['token']) AND isset($_POST['token']) AND !empty($_SESSION['token']) AND !empty($_POST['token'])) {
+      if ($_SESSION['token'] == $_POST['token']) {
+          $this->articles->addArticle($title, $chapo, $content, $author);
+          //Actualisation de l'affichage des articles
+          $this->articles();
+      }
+    } else {
+          throw new \Exception("Erreur de vérification");
+    }
   }
 
   public function editArticle($title, $chapo, $content, $author,$articleId)
   {   
-      $this->articles->updateArticle($title, $chapo, $content, $author, $articleId);
-      $this->article($articleId);
+    if (isset($_SESSION['token']) AND isset($_POST['token']) AND !empty($_SESSION['token']) AND !empty($_POST['token'])) {
+      if ($_SESSION['token'] == $_POST['token']) {
+          $this->articles->updateArticle($title, $chapo, $content, $author, $articleId);
+          $this->article($articleId);
+      }
+    } else {
+          throw new \Exception("Erreur de vérification");
+    }
   }
 
   public function dataArticle($articleId) 
